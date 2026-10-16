@@ -1,0 +1,59 @@
+[
+  {
+    "id": "VTS-ENQ-1001",
+    "dateTime": "2026-10-03T06:21:01.158Z",
+    "name": "Rajesh Sharma",
+    "company": "Vidarbha Thermal Power Pvt Ltd",
+    "email": "r.sharma@vidarbhapower.co.in",
+    "phone": "+91 9822011223",
+    "industry": "Power Plants",
+    "product": "Ash Handling Systems - Dense Phase Ash Vessel",
+    "quantity": "2 Units",
+    "location": "Chandrapur, Maharashtra",
+    "message": "We require dense phase pneumatic ash vessel specification for 210MW boiler ash handling retrofitting. Please share technical data sheet and quotation.",
+    "preferredContact": "Phone / WhatsApp",
+    "sourcePage": "Product Detail - Ash Vessel",
+    "status": "NEW",
+    "notes": [
+      "Initial enquiry received. Requires technical drawing verification."
+    ]
+  },
+  {
+    "id": "VTS-ENQ-1002",
+    "dateTime": "2026-10-01T06:21:01.158Z",
+    "name": "Amitabh Verma",
+    "company": "Apex Cement Infrastructure",
+    "email": "averma@apexcement.com",
+    "phone": "+91 9422188440",
+    "industry": "Cement Plants",
+    "product": "Air Slide Conveyor & Telescopic Chute",
+    "quantity": "1 Complete System",
+    "location": "Nagpur Industrial Zone, Maharashtra",
+    "message": "Enquiry for 350mm width Air Slide Conveyor and dust controlled Telescopic Loading Spout for bulk cement wagon loading station.",
+    "preferredContact": "Email",
+    "sourcePage": "Solutions - Material Handling",
+    "status": "QUOTATION SENT",
+    "notes": [
+      "Commercial quotation sent on 03-Oct-2026. Awaiting technical clarification meeting."
+    ]
+  },
+  {
+    "id": "VTS-ENQ-1003",
+    "dateTime": "2026-09-28T06:21:01.158Z",
+    "name": "Sandeep Deshmukh",
+    "company": "Deccan Steel & Alloys",
+    "email": "procurement@deccansteel.org",
+    "phone": "+91 9765432100",
+    "industry": "Steel / Metal Industries",
+    "product": "Dry Fog Dust Suppression System",
+    "quantity": "6 Nozzle Stations",
+    "location": "Butibori Industrial Area, Nagpur",
+    "message": "Requirement of Dry Fog Dust Suppression for coal transfer points in raw material handling section.",
+    "preferredContact": "WhatsApp",
+    "sourcePage": "Solutions - Dust & Pollution Control",
+    "status": "IN DISCUSSION",
+    "notes": [
+      "Site survey requested by customer for layout measurement."
+    ]
+  }
+]
