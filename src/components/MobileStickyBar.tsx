@@ -14,7 +14,7 @@ export default function MobileStickyBar({ onOpenQuoteModal }: MobileStickyBarPro
         
         <a
           href={`tel:${COMPANY_INFO.phones[0]}`}
-          className="flex flex-col items-center justify-center py-2 px-1 bg-slate-800 hover:bg-slate-700 text-white rounded text-[11px] font-semibold transition-colors border border-slate-700"
+          className="flex flex-col items-center justify-center py-2 px-1 bg-slate-800 hover:bg-slate-700 active:scale-95 text-white rounded-xl text-[11px] font-semibold transition-all border border-slate-700"
         >
           <Phone className="w-4 h-4 text-blue-400 mb-0.5" />
           <span>CALL US</span>
@@ -24,7 +24,7 @@ export default function MobileStickyBar({ onOpenQuoteModal }: MobileStickyBarPro
           href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent("Hello VERSATECH EPC, I would like to inquire about your material handling systems.")}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-[11px] font-semibold transition-colors shadow"
+          className="flex flex-col items-center justify-center py-2 px-1 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white rounded-xl text-[11px] font-semibold transition-all shadow"
         >
           <MessageSquare className="w-4 h-4 text-white mb-0.5" />
           <span>WHATSAPP</span>
@@ -32,7 +32,7 @@ export default function MobileStickyBar({ onOpenQuoteModal }: MobileStickyBarPro
 
         <button
           onClick={onOpenQuoteModal}
-          className="flex flex-col items-center justify-center py-2 px-1 btn-primary-orange rounded text-[11px] font-bold tracking-tight shadow"
+          className="flex flex-col items-center justify-center py-2 px-1 btn-primary-brand active:scale-95 rounded-xl text-[11px] font-bold tracking-tight shadow"
         >
           <FileText className="w-4 h-4 text-white mb-0.5" />
           <span>GET QUOTE</span>

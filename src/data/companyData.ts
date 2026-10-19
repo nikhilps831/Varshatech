@@ -16,6 +16,8 @@ export interface Solution {
   title: string;
   subtitle: string;
   description: string;
+  shortDesc?: string;
+  tags?: string[];
   keyComponents: string[];
   capabilities: string[];
   iconName: string;
@@ -73,6 +75,8 @@ export const SOLUTIONS: Solution[] = [
     title: "Ash Handling Systems",
     subtitle: "Dense-Phase Pneumatic & Mechanical Fly Ash / Bottom Ash Conveying",
     description: "VERSATECH EPC designs and manufactures advanced Ash Handling Systems tailored for thermal power plants and process industries. Utilizing dense-phase pneumatic conveying technology, our systems ensure leak-proof, dust-free transfer of fly ash and bottom ash across long distances with minimal power consumption and low wear.",
+    shortDesc: "Dense-phase pneumatic fly ash & bottom ash conveying with leak-proof high reliability.",
+    tags: ["Dense Phase Vessels", "Dome Valves", "Pneumatic Ash Conveying"],
     keyComponents: [
       "Dense Phase Ash Vessels",
       "Dome Valves & Rotary Airlock Valves",
@@ -87,13 +91,15 @@ export const SOLUTIONS: Solution[] = [
       "Low velocity conveying minimizing pipe erosion"
     ],
     iconName: "Flame",
-    image: "/images/solutions/ash-handling.jpg"
+    image: "/images/ash_handling_sys.jpg"
   },
   {
     id: "coal-handling-systems",
     title: "Coal Handling Systems",
     subtitle: "Turnkey CHP Equipment & Systems Up to 100 TPH",
     description: "Complete Coal Handling Plants (CHP) engineered for power generation, cement, steel, and industrial boilers. Stated profile capabilities up to 100 TPH throughput, including crushing, screening, magnetic separation, dust suppression, and automated belt conveyor networks.",
+    shortDesc: "Turnkey Coal Handling Plants (CHP) up to 100 TPH throughput with crushing & screening.",
+    tags: ["Up to 100 TPH", "Belt Conveyors", "Crushers & Screens"],
     keyComponents: [
       "Heavy-Duty Belt Conveyor Systems",
       "Inline Magnetic Separator (ILMS) & Suspended Magnets",
@@ -108,13 +114,15 @@ export const SOLUTIONS: Solution[] = [
       "Automated tripper and chute diverting systems"
     ],
     iconName: "Container",
-    image: "/images/solutions/coal-handling.jpg"
+    image: "/images/coal_handling_sys.jpg"
   },
   {
     id: "material-handling-equipment",
     title: "Material Handling Equipment",
     subtitle: "Bulk Solids Conveying, Elevating & Feeding Infrastructure",
     description: "Versatile bulk material handling equipment designed for continuous duty in harsh industrial environments. From granular minerals and cement clinker to grain and chemical powders, we deliver custom-engineered belt, screw, air slide, and bucket elevator systems.",
+    shortDesc: "Heavy-duty conveying, elevating, and feeding systems built for extreme industrial duty.",
+    tags: ["Bucket Elevators", "Screw Conveyors", "Air Slides"],
     keyComponents: [
       "Belt, Screw & Air Slide Conveyors",
       "Heavy-Duty Bucket Elevators",
@@ -129,13 +137,15 @@ export const SOLUTIONS: Solution[] = [
       "Zero-spillage telescopic loading chutes for truck & wagon loading"
     ],
     iconName: "Truck",
-    image: "/images/solutions/material-handling.jpg"
+    image: "/images/versatech_hero.jpg"
   },
   {
     id: "dust-pollution-control",
     title: "Dust & Pollution Control",
     subtitle: "Industrial Air Filtration, Extraction & Suppression",
     description: "Comprehensive industrial environmental solutions engineered to capture air-borne particulate matter at source. We supply bag filter systems, dry fog dust suppression, and high-efficiency industrial ventilation networks.",
+    shortDesc: "High-efficiency pulse-jet bag filters and dry fog dust suppression capturing dust at source.",
+    tags: ["Pulse-Jet Bag Filters", "Dry Fog Suppression", "Exhaust Ducting"],
     keyComponents: [
       "Pulse-Jet Bag Filter Systems",
       "Dust Extraction Hoods & Ducting Networks",
@@ -150,13 +160,15 @@ export const SOLUTIONS: Solution[] = [
       "Compliance with environmental emission norms"
     ],
     iconName: "Wind",
-    image: "/images/solutions/dust-control.jpg"
+    image: "/images/dust_pollution_control.jpg"
   },
   {
     id: "valves-flow-control",
     title: "Valves & Flow Control",
     subtitle: "Precision Material Isolation & Metering Valves",
     description: "Heavy-duty industrial valves designed specifically for abrasive materials, high temperatures, and pneumatic pressure differentials. Engineered for tight shut-off, rapid cycle times, and minimal maintenance.",
+    shortDesc: "Precision abrasion-resistant dome valves, knife gates, and airlocks for tight shut-off.",
+    tags: ["Dome Valves", "Rotary Airlocks", "Knife Gates"],
     keyComponents: [
       "Inflatable Dome Valves",
       "Rotary Airlock Valves",
@@ -171,13 +183,15 @@ export const SOLUTIONS: Solution[] = [
       "Quick overhaul designs with drop-in replacement seals"
     ],
     iconName: "Settings",
-    image: "/images/solutions/valves-flow.jpg"
+    image: "/images/valves_flow_control.jpg"
   },
   {
     id: "industrial-fabrication-epc",
     title: "Industrial Fabrication & EPC",
     subtitle: "Structural Steel, Pressure Vessels & Site Erection",
     description: "End-to-end industrial EPC capability combining structural steel fabrication, pressure vessel manufacturing according to ASME Section VIII / IS standards, heavy ducting, industrial hoppers, and complete field erection.",
+    shortDesc: "ASME Section VIII pressure vessels, heavy structural fabrication, silos & turnkey erection.",
+    tags: ["ASME Section VIII", "Storage Silos", "Turnkey Erection"],
     keyComponents: [
       "ASME Section VIII / IS 2825 / IS 17938 Compliant Vessels",
       "Storage Silos & Heavy Process Hoppers",
@@ -192,7 +206,7 @@ export const SOLUTIONS: Solution[] = [
       "System modification and plant brownfield revamping"
     ],
     iconName: "Wrench",
-    image: "/images/solutions/fabrication-epc.jpg"
+    image: "/images/pressure_vessels_hero.jpg"
   }
 ];
 

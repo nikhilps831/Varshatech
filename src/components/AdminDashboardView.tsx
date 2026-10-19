@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import Image from "next/image";
 import { Search, Download, Filter, RefreshCw, CheckCircle2, Clock, FileText, Phone, Mail, MessageSquare, AlertCircle, Shield, User, Building, MapPin, Tag, Plus, Edit3 } from "lucide-react";
 import { EnquiryRecord } from "@/lib/db";
 
@@ -111,8 +112,14 @@ export default function AdminDashboardView() {
       <div className="min-h-screen pt-32 pb-20 bg-slate-950 flex items-center justify-center p-4">
         <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-xl p-8 shadow-2xl text-white">
           <div className="text-center mb-6">
-            <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mx-auto text-white font-mono font-bold text-xl mb-3">
-              V
+            <div className="w-14 h-14 bg-white rounded-xl p-1.5 flex items-center justify-center mx-auto mb-3 shadow-md">
+              <Image
+                src="/logo.png"
+                alt="VERSATECH EPC Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-contain"
+              />
             </div>
             <h2 className="text-2xl font-black tracking-wide">VERSATECH EPC ADMIN</h2>
             <p className="text-xs text-slate-400 mt-1">Enquiry Management & Lead Pipeline Portal</p>

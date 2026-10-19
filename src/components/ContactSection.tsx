@@ -63,7 +63,7 @@ export default function ContactSection() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 border border-blue-200 text-blue-800 rounded-full text-xs font-extrabold uppercase tracking-wider">
             <span>GET IN TOUCH WITH OUR NAGPUR TEAM</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Contact VERSATECH EPC
           </h2>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed">

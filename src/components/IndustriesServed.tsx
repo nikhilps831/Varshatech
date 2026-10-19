@@ -30,7 +30,7 @@ export default function IndustriesServed() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-slate-200 border border-slate-300 text-slate-800 rounded-full text-xs font-extrabold uppercase tracking-wider">
             <span>KEY SECTORS WE SERVE</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Industries Powered by VERSATECH EPC
           </h2>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed">

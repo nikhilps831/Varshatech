@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Globe, Shield, ArrowRight, Cog } from "lucide-react";
 import { COMPANY_INFO, SOLUTIONS, PRODUCT_CATEGORIES } from "@/data/companyData";
 
@@ -20,7 +21,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
               <Shield className="w-3.5 h-3.5" />
               <span>Turnkey Material Handling Systems</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
               Ready to Upgrade Your Industrial Material Handling System?
             </h3>
             <p className="text-slate-300 text-sm mt-1 max-w-xl">
@@ -43,11 +44,17 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
           
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-9 h-9 bg-orange-600 rounded flex items-center justify-center font-bold text-white font-mono text-xl">
-                V
+            <div className="flex items-center space-x-3">
+              <div className="relative w-10 h-10 p-1 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="VERSATECH EPC Logo"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1.5">
                 <span className="text-xl font-black text-white tracking-wider">VERSATECH</span>
                 <span className="text-xl font-black text-orange-500">EPC</span>
               </div>

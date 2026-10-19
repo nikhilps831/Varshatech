@@ -12,7 +12,7 @@ export default function ProjectsSection() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-slate-200 border border-slate-300 text-slate-800 rounded-full text-xs font-extrabold uppercase tracking-wider">
             <span>EXECUTED CONTRACTS & CASE STUDIES</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Industrial Project Showcase
           </h2>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed">

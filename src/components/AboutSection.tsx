@@ -18,7 +18,7 @@ export default function AboutSection() {
               <span>ABOUT VERSATECH EPC</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
               Industrial Engineering & Material Handling Excellence Since 2008
             </h2>
 

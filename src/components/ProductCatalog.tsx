@@ -38,7 +38,7 @@ export default function ProductCatalog({
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 border border-blue-200 text-blue-800 rounded-full text-xs font-extrabold uppercase tracking-wider">
             <span>INDUSTRIAL PRODUCT CATALOGUE</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Equipment & Component Offerings
           </h2>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed">
@@ -88,9 +88,9 @@ export default function ProductCatalog({
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors border ${
+                  className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all border ${
                     activeCategory === cat.id
-                      ? "bg-orange-600 text-white border-orange-600 shadow"
+                      ? "bg-orange-600 text-white border-orange-600 shadow-md"
                       : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
                   }`}
                 >

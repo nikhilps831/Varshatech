@@ -68,7 +68,7 @@ export default function HeroSection({ onOpenQuoteModal }: HeroSectionProps) {
   const activeSlide = HERO_SLIDES[currentSlide];
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] pt-36 md:pt-44 pb-28 md:pb-36 flex items-center overflow-hidden border-b border-slate-200 group">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] pt-24 sm:pt-28 lg:pt-44 pb-24 md:pb-32 flex items-center overflow-hidden border-b border-slate-200 group">
 
       {/* Dynamic Smooth Carousel Background Images */}
       <div className="absolute inset-0 z-0 bg-slate-950 overflow-hidden">
@@ -77,11 +77,10 @@ export default function HeroSection({ onOpenQuoteModal }: HeroSectionProps) {
           return (
             <div
               key={slide.image}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                isActive
-                  ? "opacity-100 scale-105 z-10"
-                  : "opacity-0 scale-100 z-0 pointer-events-none"
-              }`}
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${isActive
+                ? "opacity-120 scale-105 z-10"
+                : "opacity-0 scale-100 z-0 pointer-events-none"
+                }`}
             >
               <Image
                 src={slide.image}
@@ -125,13 +124,13 @@ export default function HeroSection({ onOpenQuoteModal }: HeroSectionProps) {
 
             {/* Dynamic Animated Headline */}
             <div key={currentSlide} className="transition-all duration-500 transform translate-y-0 opacity-100">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight drop-shadow-md">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.15] tracking-tight drop-shadow-md">
                 {activeSlide.headlineTitle}{" "}
                 <span className="text-orange-500">{activeSlide.headlineAccent}</span>{" "}
                 {activeSlide.headlineEnd}
               </h1>
 
-              <p className="text-slate-100 text-base md:text-lg leading-relaxed max-w-2xl font-normal drop-shadow-md mt-4">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-100 max-w-2xl font-normal drop-shadow-md mt-3 sm:mt-4">
                 {activeSlide.description}
               </p>
             </div>
@@ -240,11 +239,10 @@ export default function HeroSection({ onOpenQuoteModal }: HeroSectionProps) {
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
-                  className={`h-1.5 rounded-full transition-all duration-500 ${
-                    idx === currentSlide
-                      ? "w-10 bg-orange-500 shadow-lg shadow-orange-500/50"
-                      : "w-3 bg-slate-700 hover:bg-slate-500"
-                  }`}
+                  className={`h-1.5 rounded-full transition-all duration-500 ${idx === currentSlide
+                    ? "w-10 bg-orange-500 shadow-lg shadow-orange-500/50"
+                    : "w-3 bg-slate-700 hover:bg-slate-500"
+                    }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
               ))}

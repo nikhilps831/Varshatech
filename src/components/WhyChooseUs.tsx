@@ -20,7 +20,7 @@ export default function WhyChooseUs({ onOpenQuoteModal }: WhyChooseUsProps) {
               <span>THE VERSATECH ADVANTAGE</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
               Why Partner With VERSATECH EPC?
             </h2>
 
