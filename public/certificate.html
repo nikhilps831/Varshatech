@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate of Trust - VERSATECH EPC | TradeIndia Verified Seller</title>
+  <meta name="description" content="Official TradeIndia Certificate of Trust for VERSATECH EPC Nagpur. Verified seller status, GSTIN, proprietorship and manufacturing capabilities.">
+  <link rel="icon" href="/favicon.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Top Controls */
+    .top-bar {
+      max-width: 860px;
+      width: 100%;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      transition: opacity 0.2s;
+    }
+    .brand-link:hover {
+      opacity: 0.85;
+    }
+    .brand-link img {
+      width: 32px;
+      height: 32px;
+      object-contain: fit;
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-secondary {
+      background: #1e293b;
+      color: #e2e8f0;
+      border-color: #334155;
+    }
+    .btn-secondary:hover {
+      background: #334155;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #ea580c;
+      color: #ffffff;
+    }
+    .btn-print:hover {
+      background: #c2410c;
+    }
+    .btn-tradeindia {
+      background: #059669;
+      color: #ffffff;
+    }
+    .btn-tradeindia:hover {
+      background: #047857;
+    }
+
+    /* Certificate Wrapper */
+    .certificate-card {
+      max-width: 860px;
+      width: 100%;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-header {
+      padding: 16px 24px;
+      background: #0b1120;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+    .cert-meta {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* Certificate Image Showcase */
+    .cert-image-stage {
+      padding: 24px;
+      background: #090d16;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cert-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    /* Verification Details Footer */
+    .verification-info {
+      padding: 20px 24px;
+      background: #1e293b;
+      border-top: 1px solid #334155;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .info-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #94a3b8;
+      font-weight: 700;
+    }
+    .info-value {
+      font-size: 13px;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    .info-value.highlight {
+      color: #34d399;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .top-bar, .card-header, .verification-info {
+        display: none !important;
+      }
+      .certificate-card {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        max-width: 100% !important;
+      }
+      .cert-image-stage {
+        padding: 0 !important;
+        background: transparent !important;
+      }
+      .cert-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Controls -->
+  <div class="top-bar">
+    <a href="/" class="brand-link">
+      <img src="/logo.png" alt="VERSATECH EPC Logo">
+      <span>&larr; Back to VERSATECH EPC</span>
+    </a>
+
+    <div class="action-group">
+      <a href="/certificate-of-trust.png" download="VERSATECH-EPC-Certificate-of-Trust.png" class="btn btn-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Certificate
+      </a>
+      <button onclick="window.print()" class="btn btn-print">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / PDF
+      </button>
+      <a href="https://www.tradeindia.com/truststamp-member/Versatech-EPC-27976599/" target="_blank" rel="noopener noreferrer" class="btn btn-tradeindia">
+        <span>Verify on TradeIndia.com &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Certificate Box -->
+  <div class="certificate-card">
+    <div class="card-header">
+      <div class="badge-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        TradeIndia Trust Stamp Certified
+      </div>
+      <div class="cert-meta">
+        Issue Date: <strong>2025-11-04</strong> • Trusted Seller Partner
+      </div>
+    </div>
+
+    <!-- The Exact Certificate Image -->
+    <div class="cert-image-stage">
+      <img
+        src="/certificate-of-trust.png"
+        alt="TradeIndia Certificate of Trust - VERSATECH EPC"
+        class="cert-image"
+      >
+    </div>
+
+    <!-- Verified Information Summary -->
+    <div class="verification-info">
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">Verified Entity</span>
+          <span class="info-value">VERSATECH EPC</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Proprietor / Director</span>
+          <span class="info-value">Devendra Ramprasad Shukla</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">GSTIN</span>
+          <span class="info-value highlight">27AAGFV7936A1Z2</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Registered Location</span>
+          <span class="info-value">Nagpur, Maharashtra, 440009</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

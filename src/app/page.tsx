@@ -29,13 +29,13 @@ export default function Home() {
       <HeroCounter />
       <AboutSection />
       <SolutionsGrid onOpenQuoteModal={handleOpenQuoteModal} />
-      <ProductCatalog onOpenQuoteModal={handleOpenQuoteModal} />
+      <ProductCatalog onOpenQuoteModal={handleOpenQuoteModal} limit={9} showAllButton={true} isHomePage={true} />
       <IndustriesServed />
       <ServicesSection />
       <ProjectsSection />
       <WhyChooseUs onOpenQuoteModal={handleOpenQuoteModal} />
       <ContactSection />
-      <ClientLogoCarousel />
+      {/*<ClientLogoCarousel />*/}
 
       <EnquiryModal
         isOpen={modalOpen}

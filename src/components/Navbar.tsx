@@ -22,7 +22,9 @@ import {
   PhoneCall,
   MessageSquare,
   ShieldCheck,
-  FileText
+  FileText,
+  ExternalLink,
+  Download
 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/companyData";
 
@@ -33,6 +35,7 @@ interface NavbarProps {
 export default function Navbar({ onOpenQuoteModal }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showCertModal, setShowCertModal] = useState(false);
   const pathname = usePathname();
 
   // Handle scroll effect for glassmorphic header
@@ -48,9 +51,9 @@ export default function Navbar({ onOpenQuoteModal }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile drawer is open
+  // Lock body scroll when mobile drawer or cert modal is open
   useEffect(() => {
-    if (mobileMenuOpen) {
+    if (mobileMenuOpen || showCertModal) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -58,16 +61,20 @@ export default function Navbar({ onOpenQuoteModal }: NavbarProps) {
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, showCertModal]);
 
   // Close drawer on route change or ESC
   useEffect(() => {
     setMobileMenuOpen(false);
+    setShowCertModal(false);
   }, [pathname]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMobileMenuOpen(false);
+      if (e.key === "Escape") {
+        setMobileMenuOpen(false);
+        setShowCertModal(false);
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
@@ -116,11 +123,23 @@ export default function Navbar({ onOpenQuoteModal }: NavbarProps) {
           </div>
 
           {/* Trust Badges & Portal */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-slate-900 border border-slate-800 rounded-full text-slate-300 font-medium text-[10px] tracking-wider">
               <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
               <span>Estd. {COMPANY_INFO.foundedYear} </span>
             </span>
+
+            <button
+              type="button"
+              onClick={() => setShowCertModal(true)}
+              title="TradeIndia Verified Seller - Click to open Certificate of Trust"
+              className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-700/60 hover:border-emerald-500 rounded-full text-emerald-300 hover:text-emerald-200 font-semibold text-[10px] tracking-wider transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <ShieldCheck className="w-3 h-3 text-emerald-400" />
+              <span>Verified Seller</span>
+            </button>
+
             <Link
               href="/admin"
               className="text-slate-400 hover:text-white text-[11px] font-semibold transition-colors flex items-center gap-1 px-2 py-0.5 rounded hover:bg-slate-900 border border-transparent hover:border-slate-800"
@@ -272,7 +291,25 @@ export default function Navbar({ onOpenQuoteModal }: NavbarProps) {
           </div>
 
           {/* Quick Action Touch Pills */}
-          <div className="p-4 border-b border-slate-100 bg-white">
+          <div className="p-4 border-b border-slate-100 bg-white space-y-2.5">
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setShowCertModal(true);
+              }}
+              className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-emerald-950 text-emerald-300 hover:bg-emerald-900 border border-emerald-700/60 shadow-xs transition-all active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <span className="text-xs font-bold text-white">TradeIndia Verified Seller</span>
+              </div>
+              <span className="text-[10px] bg-emerald-800/90 text-emerald-200 px-2 py-0.5 rounded-full border border-emerald-600/40 font-semibold">
+                View Certificate
+              </span>
+            </button>
+
             <div className="grid grid-cols-3 gap-2">
               <a
                 href={`tel:${COMPANY_INFO.phones[0]}`}
@@ -358,6 +395,104 @@ export default function Navbar({ onOpenQuoteModal }: NavbarProps) {
             </div>
           </div>
 
+        </div>
+      )}
+
+      {/* CERTIFICATE OF TRUST LIGHTBOX MODAL */}
+      {showCertModal && (
+        <div
+          className="fixed inset-0 z-[100] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto animate-in fade-in duration-200"
+          onClick={() => setShowCertModal(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="cert-modal-title"
+        >
+          <div
+            className="relative w-full max-w-2xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden my-auto flex flex-col animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="px-4 sm:px-6 py-3.5 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-700/60 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <h3 id="cert-modal-title" className="text-sm sm:text-base font-bold text-white truncate">
+                    Certificate of Trust
+                  </h3>
+                  <p className="text-[11px] text-emerald-400 font-medium truncate">
+                    TradeIndia Verified Seller Partner • VERSATECH EPC
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 flex-shrink-0">
+                <a
+                  href="/certificate-of-trust.png"
+                  download="VERSATECH-EPC-Certificate-of-Trust.png"
+                  title="Download Certificate Image"
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+                >
+                  <Download className="w-4 h-4" />
+                </a>
+                <a
+                  href="/certificate.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Open Certificate in New Tab"
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setShowCertModal(false)}
+                  title="Close modal (Esc)"
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Certificate Image Display */}
+            <div className="p-3 sm:p-5 bg-slate-950/70 overflow-y-auto max-h-[72vh] flex items-center justify-center">
+              <img
+                src="/certificate-of-trust.png"
+                alt="VERSATECH EPC TradeIndia Certificate of Trust"
+                className="w-auto max-w-full h-auto max-h-[68vh] object-contain rounded-lg shadow-xl border border-slate-800/80"
+              />
+            </div>
+
+            {/* Modal Footer */}
+            <div className="px-4 sm:px-6 py-3 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+              <div className="text-slate-400 text-center sm:text-left text-[11px] leading-tight">
+                <span className="text-slate-300 font-semibold block sm:inline">DEVENDRA RAMPRASAD SHUKLA (Proprietor)</span>
+                <span className="hidden sm:inline"> • </span>
+                <span>GSTIN: <strong className="text-emerald-400 font-mono">27AAGFV7936A1Z2</strong></span>
+              </div>
+
+              <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                <a
+                  href="https://www.tradeindia.com/truststamp-member/Versatech-EPC-27976599/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg transition-colors text-[11px]"
+                >
+                  <span>Verify on TradeIndia</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setShowCertModal(false)}
+                  className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition-colors text-[11px] cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 

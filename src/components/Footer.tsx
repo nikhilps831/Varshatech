@@ -13,9 +13,9 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-24 lg:pb-12">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        
+
         {/* Top CTA Banner */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 mb-16 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        {/* <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 mb-16 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
           <div className="relative z-10">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-orange-950/80 border border-orange-700/60 rounded-full text-orange-400 text-xs font-bold uppercase tracking-wider mb-2">
               <Shield className="w-3.5 h-3.5" />
@@ -37,11 +37,11 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* 4 Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
-          
+
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">

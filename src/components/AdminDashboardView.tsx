@@ -165,7 +165,7 @@ export default function AdminDashboardView() {
   return (
     <div className="min-h-screen pt-28 pb-20 bg-slate-100 text-slate-900">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        
+
         {/* Header Bar */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8 bg-slate-900 text-white p-6 rounded-xl border border-slate-800 shadow-xl">
           <div>
@@ -253,11 +253,10 @@ export default function AdminDashboardView() {
               <button
                 key={st}
                 onClick={() => setStatusFilter(st)}
-                className={`px-3 py-1.5 rounded text-[11px] font-bold uppercase tracking-wider transition-colors border ${
-                  statusFilter === st
+                className={`px-3 py-1.5 rounded text-[11px] font-bold uppercase tracking-wider transition-colors border ${statusFilter === st
                     ? "bg-slate-900 text-white border-slate-900"
                     : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 {st}
               </button>
@@ -291,9 +290,8 @@ export default function AdminDashboardView() {
                     return (
                       <tr
                         key={enq.id}
-                        className={`hover:bg-blue-50/50 transition-colors ${
-                          isSelected ? "bg-blue-50/80 font-medium" : ""
-                        }`}
+                        className={`hover:bg-blue-50/50 transition-colors ${isSelected ? "bg-blue-50/80 font-medium" : ""
+                          }`}
                       >
                         <td className="p-3 font-mono font-bold text-slate-900">{enq.id}</td>
                         <td className="p-3 text-slate-500 whitespace-nowrap">
@@ -311,17 +309,16 @@ export default function AdminDashboardView() {
                         <td className="p-3 text-slate-600">{enq.location || "N/A"}</td>
                         <td className="p-3">
                           <span
-                            className={`px-2.5 py-1 rounded text-[10px] font-mono font-bold uppercase ${
-                              enq.status === "NEW"
+                            className={`px-2.5 py-1 rounded text-[10px] font-mono font-bold uppercase ${enq.status === "NEW"
                                 ? "bg-blue-100 text-blue-800 border border-blue-200"
                                 : enq.status === "QUOTATION SENT"
-                                ? "bg-indigo-100 text-indigo-800 border border-indigo-200"
-                                : enq.status === "WON"
-                                ? "bg-emerald-100 text-emerald-800 border border-emerald-200"
-                                : enq.status === "CLOSED"
-                                ? "bg-slate-200 text-slate-700"
-                                : "bg-amber-100 text-amber-800 border border-amber-200"
-                            }`}
+                                  ? "bg-indigo-100 text-indigo-800 border border-indigo-200"
+                                  : enq.status === "WON"
+                                    ? "bg-emerald-100 text-emerald-800 border border-emerald-200"
+                                    : enq.status === "CLOSED"
+                                      ? "bg-slate-200 text-slate-700"
+                                      : "bg-amber-100 text-amber-800 border border-amber-200"
+                              }`}
                           >
                             {enq.status}
                           </span>
@@ -350,7 +347,7 @@ export default function AdminDashboardView() {
         {selectedEnquiry && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
             <div className="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200 my-8">
-              
+
               <div className="bg-blueprint-grid text-white p-6 flex items-center justify-between border-b border-slate-700">
                 <div>
                   <div className="flex items-center space-x-2">
@@ -371,7 +368,7 @@ export default function AdminDashboardView() {
               </div>
 
               <div className="p-6 space-y-6 max-h-[75vh] overflow-y-auto text-xs text-slate-700">
-                
+
                 {/* Contact Actions Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <a

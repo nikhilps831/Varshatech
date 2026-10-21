@@ -25,7 +25,7 @@ export default function IndustriesServed() {
   return (
     <section id="industries" className="py-20 md:py-28 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-slate-200 border border-slate-300 text-slate-800 rounded-full text-xs font-extrabold uppercase tracking-wider">
             <span>KEY SECTORS WE SERVE</span>

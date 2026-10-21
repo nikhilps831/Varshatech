@@ -53,6 +53,15 @@
   background-size: 24px 24px;
 }
 
+/* Dark Engineering Blueprint Grid */
+.bg-blueprint-grid {
+  background-color: #0b1120;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
 /* Industrial Card Hover Effects (Light Theme) */
 .industrial-card-light {
   background-color: #ffffff;
@@ -147,6 +156,28 @@ html {
 }
 
 .animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Category Pills Continuous Smooth Carousel Marquee */
+@keyframes categoryCarouselMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-category-carousel {
+  display: flex;
+  width: max-content;
+  animation: categoryCarouselMarquee 85s linear infinite;
+  will-change: transform;
+}
+
+.animate-category-carousel:hover,
+.animate-category-carousel:focus-within {
   animation-play-state: paused;
 }
 

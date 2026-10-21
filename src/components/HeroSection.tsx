@@ -177,14 +177,28 @@ export default function HeroSection({ onOpenQuoteModal }: HeroSectionProps) {
               <div className="relative bg-slate-900/80 border border-slate-700/80 p-7 rounded-2xl shadow-2xl backdrop-blur-xl space-y-6">
 
                 {/* Card Header */}
-                <div className="border-b border-slate-800 pb-4 flex items-center justify-between">
+                <div className="border-b border-slate-800 pb-4 flex items-center justify-between gap-3">
                   <div>
                     <span className="text-[11px] font-mono font-bold text-orange-400 uppercase tracking-widest block">
                       EPC CAPABILITIES & STANDARDS
                     </span>
                     <h3 className="text-xl font-bold text-white mt-0.5">VERSATECH Nagpur</h3>
                   </div>
-                  <ShieldCheck className="w-7 h-7 text-orange-400 flex-shrink-0 opacity-80" />
+
+                  {/* TradeIndia Trusted Seller Badge - Click opens verified certificate */}
+                  <a
+                    href="/certificate.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="TradeIndia Trusted Seller - Click to open Certificate of Trust"
+                    className="group/badge flex-shrink-0 bg-[#f7f5ed] hover:bg-white px-2.5 py-1 rounded-lg border border-emerald-600/50 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/30 flex items-center"
+                  >
+                    <img
+                      src="/images/trusted-seller.svg"
+                      alt="TradeIndia Trusted Seller - VERSATECH EPC"
+                      className="h-8 w-auto object-contain select-none"
+                    />
+                  </a>
                 </div>
 
                 {/* Feature Highlights */}
